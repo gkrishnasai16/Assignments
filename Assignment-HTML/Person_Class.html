@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function Person(name,address,dob){
+			this.name=name;
+			this.address=address;
+			this.dob=dob;
+			this.getName=function(){
+				return this.name;
+			}
+			this.getAddress=function(){
+				return this.address;
+			}
+			this.getDob=function(){
+				return this.dob;
+			}
+		}
+		var coll=new Array();
+		function save(){	
+			var name=document.getElementById('name').value;
+			var address=document.getElementById('address').value;
+			var dob=document.getElementById('dob').value;
+			var obj=new Person(name,address,dob)
+			coll.push(obj)
+		}
+		function display(){
+			str="<table border='5px'>"
+			for(i=0;i<coll.length;i++){
+				str+="<tr> <td>"+coll[i].getName()+"</td> <td>"+coll[i].getAddress()+"</td> <td>"+coll[i].getDob()+"</td></tr>"
+			}
+			str+='</table>'
+			document.getElementById('d1').innerHTML=str;
+		}
+
+		function calAge(){
+                
+                const date2_str = document.getElementById("dob").value;
+                const date1 = new Date();
+				const date2 = new Date(date2_str);
+				const diff = (date2.getTime()-date1.getTime());
+				alert("Age is :-\n"+diff/(1000)+"Minutes\n"+diff/(1000*3600)+"Hours\n"+diff/(1000*3600*24)+" Days\n"+""+diff/(1000*3600*24*365)+" Years");
+        }
+
+	</script>
+</head>
+<body>
+	Enter your Name <input type="text" name="" id="name"> <br>
+	Enter your Address <input type="text" name="" id="address"> <br>
+	Enter your DOB <input type="date" name="" id="dob"> <br>
+	<input type="button" name="" onclick="save()" value="Submit"> <br>
+    <input type="button" name="" onclick="calAge()" value="Calculate Age" id="dob"> <br>
+    <input type="button" name="" onclick="display()" value="Display"> <br>
+</body>
+</html>

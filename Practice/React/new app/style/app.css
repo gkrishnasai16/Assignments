@@ -1,0 +1,11 @@
+table {
+    display: flex;
+    justify-content: center;
+    background-color: grays;
+    border: 1px solid orange
+}
+
+td {
+    border: 1px solid gray;
+    width: 30em;
+}

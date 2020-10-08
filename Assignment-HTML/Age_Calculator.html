@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		//ES5 notation
+		function calc(){
+			const date1_str = document.getElementById("date1").value;
+			const date2_str = document.getElementById("date2").value;
+			const date1 = new Date(date1_str);
+			const date2 = new Date(date2_str);
+			const diff = (date2.getTime()-date1.getTime());
+			if(diff<0)
+				alert("Date1 should be less than Date2")
+			else
+			alert("difference is :-\n"+diff/(1000)+"Minutes\n"+diff/(1000*3600)+"Hours\n"+diff/(1000*3600*24)+" Days\n"+""+diff/(1000*3600*24*365)+" Years");
+		}
+		
+
+	</script>
+</head>
+<body>
+	Enter Date1 <input type="date" name="" id="date1"> <br>
+	Enter Date2 <input type="date" name="" id="date2"> <br>
+
+	<input type="button" name="" onclick="calc()" value="Get difference" > <br>
+
+	<div id="d1"></div>
+</body>
+</html>

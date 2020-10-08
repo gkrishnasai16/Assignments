@@ -1,0 +1,34 @@
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: "+";
+    color: royalblue;
+    float: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    marker: -5px 5px 0 0;
+    padding: 0;
+    text-align: center;
+    width: 20px;
+}
+
+details[open] summary:after {
+    content: "-";
+}
+
+
+/* .header::-webkit-details-marker {
+    color: indigo;
+    background-color: green;
+}
+
+header[open] header::-webkit-full-screen {
+    color: lightblue;
+    background-color: red;
+    outline: 2px solid green;
+} */
+        
+        
+        

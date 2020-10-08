@@ -1,0 +1,309 @@
+1.how to filter the array data in javascript react
+import React from 'react';
+
+const names = ['Eshan', 'Ear', 'Paul', 'Manisho', 'George'];
+
+function App() {
+  
+      names.filter(name => name.includes('E')).foreach(filteredName => (
+	console.log(filteredName);	
+	));
+}
+
+2. how get parent element javascript
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<h1>Question 2</h1>
+</head>
+<body>
+    <div id="parent">
+        <p class="child">This is inside Parent DIV</p>
+    </div>
+
+    <script>
+        const child = document.querySelector('.child');
+        console.log(child.parentNode);
+    </script>
+</body>
+</html>
+
+3.add all elements in array javascript
+<script>
+        var array = [1, 2, 3, 4, 5];
+        console.log(array.reduce(function(acc, val){
+            return acc + val;
+        }, 0));    
+    </script>
+
+4.add an element to an array javascript
+<script>
+var myArray = ["item1", "item2", "item3", "item4"];
+console.log(myArray);
+function myFunction() {
+  myArray.push("newItem");
+console.log(myArray);
+}
+</script>
+
+5.add 10 seconds to date javascript
+ <script>
+         const date = new Date();
+         console.log(date);
+         console.log(date.getSeconds()+10);
+      </script>
+
+6.add 10px to width js
+<script>
+    function zoomin(){
+        var myTable = document.getElementById("testTable");
+        var currWidth = testTable.clientWidth;
+        myTable.style.width = (currWidth + 10) + "px";
+    }
+
+</script>
+</head>
+<body>
+    <p>
+        <button type="button" onclick="zoomin()"> Add 10px</button>
+    </p>
+	<table border="3px"id="testTable">
+		<tr>
+			<td>data1</td>
+			<td>data2</td>
+		</tr>
+	</table>
+</body>
+
+7.add 2 class names react
+ render(){
+        return(
+        <div>
+            
+        <p>Current Count :</p><p>{this.state.value}</p>
+            <br/>
+            <button onClick={this.onIncrement}>Increment</button>
+            <button onClick={this.onDecrement}>Decrement</button>
+             <Component2 value={this.state.value} onIncrement={this.onIncrement} onDecrement={this.onDecrement}/>
+             <Component3 value={this.state.value} onIncrement={this.onIncrement} onDecrement={this.onDecrement}/>
+        </div>
+        );
+    };
+
+8.add 2 for hours in date timestamp js
+ <script>
+         var date = new Date();
+         dt.setHours( date.getHours() + 2 );
+         console.log(date);
+  </script>
+
+9.add 7 days in date using jquery
+<script>
+         var date = new Date();
+	date.setDate(date.getDate() + 7);
+	console.log(date);
+</script>
+
+10.add a route to a buttoin in angular
+mport {Router} from '@angular/router'; // import router from angular router
+
+export class Component{ 				// Example component.. 
+	constructor(private route:Router){} 
+  
+  	go(){
+		this.route.navigate(['/page']); // navigate to other page
+	}
+}
+
+11.add a slash to string in javascript
+<script>
+	const sentence = "sentence with \\ in it";
+	console.log(sentence); 
+</script>
+
+12,13,15.how to run a filter having object [] in reactjs, returning JSX, Using JS in JSX
+const names = ['Eshan', 'Ear', 'Paul', 'Manisho', 'George'];
+
+function App() {
+  return (
+    <div>
+      {names.filter(name => name.includes('J')).map(filteredName => (
+        <li>
+          {filteredName}
+        </li>
+      ))}
+    </div>
+  );
+}
+
+14.Render JSX
+render(){
+        return(
+        <div>
+            
+        <p>Current Count :</p><p>{this.props.value}</p>
+            <br/>
+            <button onClick={()=>this.props.onIncrement()}>Increment</button>
+            <button onClick={()=>this.props.onDecrement()}>Decrement</button>
+             
+        </div>
+        );
+    };
+
+16.How to Use array in JSX
+import React from 'react';
+export default class App2 extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            inputValue:'',
+            items:[],
+        }
+    }
+
+    onInputChange(e){
+        this.setState({
+            inputValue:e.target.value
+        });
+    }
+
+    addItems(){
+        let items=this.state.items;
+        items.push(this.state.inputValue);
+        this.setState({
+            items
+        })
+    }
+
+    listItems(){
+        let items=this.state.items;
+        console.log(items)
+        return(
+            <ul>
+            {
+                items.map((val,index)=>{
+                    return(
+                        <li key={index}>
+                            {val}
+                        </li>
+                    );
+                })
+            }
+            </ul>
+        )
+    }
+
+    render(){
+        return(
+        <div>
+            <input type="text" onChange={(e)=>this.onInputChange(e)}/>
+            <button onClick={()=>this.addItems()}> Add Items</button>
+            {this.listItems()}
+        </div>)
+    };
+}
+
+17.How to define a component
+--> A class can be called as component if it includes the "extends React.Component" statement and name must start with an upper case letter.
+
+18. What is the use of this.props.children
+--> These are parameters/arguments pass to Components which can be further used inside Component they are mentioned before 
+closing tag while invoking a Component.
+eg :- "<Component exampleProp="value" />" now this can be accessed inside Component as "this.props.exampleProp" .
+
+19. Finding a DOM node
+Fastest way to find a DOM node is by giving ref value to an element and using it to find it. eg:- ReactDOM.findDOMNode(this.refs.refId)
+
+20. Example to use this.state
+
+import React,{Component} from 'react'
+
+ class App3 extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            names:['EShan','Tanish','James','Paul','George','Esha'],
+  people:[
+    {
+        name:"Eshan",
+        age:10
+    },
+    {
+        name:"Tanish",
+        age:20
+    },
+    {
+        name:"Manish",
+        age:30
+    },
+    {
+        name:"CHiku",
+        age:40
+    }
+]
+        }
+    }
+
+    render() {
+    return (
+        <div>
+            
+            {this.state.people.filter(person=>person.age>=30).map(filteredPerson=>(
+                <li key={filteredPerson.name}>
+                    {filteredPerson.name}
+                </li>
+            ))}
+            
+            {
+                this.state.names.filter(item=>item.includes('E')).map(item_filtered=>(
+                    <li key={item_filtered}>
+                        {item_filtered}
+                    </li>
+                ))
+            } 
+
+        </div>
+    )
+        }
+}
+
+export default App3;
+        
+
+21. Component Lifecycle
+
+-->First Render 
+	->getDefaultProps
+
+	->getinitialState
+
+	->componentwillMount
+
+	->render
+
+	->componentDidMount
+
+-->PropsChange
+	->componentWillReceiveProps
+
+	->shouldComponentUpdate
+
+	->componentWillUpdate
+
+	->render
+
+	->componentdidUpdate
+
+-->State Chance
+	->shouldComponentUpdate
+
+	->componentWillUpdate
+
+	->render
+
+	->componentDidupdate
+
+-->Unmount
+	->componentWillUnmount

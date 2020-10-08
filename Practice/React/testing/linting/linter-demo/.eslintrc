@@ -1,0 +1,12 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "no-undef": [ 1 ],
+      "quotes": ["error", "double"],
+      "curly": ["error", "multi"],
+      "comma-spacing": ["error", { "before": true, "after": true }]
+    }
+  }

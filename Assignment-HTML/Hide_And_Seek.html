@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#catch {
+  position: absolute;
+}
+</style>
+
+<script>
+function myFunction() {
+	var x = Math.random()*1000;
+	var y = Math.random()*500;
+  document.getElementById("catch").style.left = (x)+"px";
+  document.getElementById("catch").style.top = (y)+"px";
+}
+</script>
+
+</head>
+<body>
+<button type="button" id="catch" onclick="myFunction()">Catch Me</button>
+</body>
+</html>
