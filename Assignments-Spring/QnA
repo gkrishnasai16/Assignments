@@ -1,0 +1,29 @@
+1. What is Spring Boot? Why should you use it?
+--> Spring Boot
+   -> It is java based framework developed by Pivotel Software.
+   -> It provides a platform for auto configurable production grade spring application with 
+      which developers can quickly start building their spring application.
+--> Why use Spring Boot
+   -> Reduced development time
+   -> Huge user community
+   -> Easy to develop and test.
+   -> Comes with in-built servers like Tomcat.
+
+2.What is the difference between @SpringBootApplication and @EnableAutoConfiguration annotation?
+--> @SpringBootApplication is combination of three annotations - @Configuration, @ComponentScan and @EnableAutoconfiguration.
+    spring boot designers bundled these together as these 3 are frequently used together.
+    with @springBootApllication the above 3 annotations are run with their default attributes
+     @SpringBootApplication was released in the 1.2 release while @EnableAutoconfiguration is present from 1.0 release.
+
+3.What is Spring Initializer? why should you use it?
+--> Web application that can generate a basic Spring Boot project structure and either a Maven or a Gradle build specification to build your code with.
+    Easy to generate the structure of the project. Offers extinsible API and various options for the project.
+
+4.What is Spring Boot CLI? What are its benefits?
+-->The Spring Boot CLI is a Command Line Interface for Spring Boot. It can be used for a quick start with Spring.
+   However, it is a quick way to start playing around with Spring. It allows running groovy scripts, just like java 
+   code without many complex configurations.
+
+5.Can you change the port of Embedded Tomcat server in Spring boot? If Yes, How?
+-->Yes, a way to change the port of embedded tomcat in the Spring Boot application is by specifying the server. port property in the resource file.
+ For example, if you want your Spring boot application to listen on port 9000, then you can specify server. port=9000 on the application.
