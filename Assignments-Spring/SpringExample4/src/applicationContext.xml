@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+<bean id="project1" class="com.training.org.Project">
+	<property name="ProjectName" value="Toyota"></property>
+	<property name="technology" value="Toyota1"></property>
+	<property name="managerName" value="Toyota2"></property>
+	<property name="teamMembers" value="10"></property>
+</bean>
+
+<bean id="project2" class="com.training.org.Project">
+	<property name="ProjectName" value="Toota"></property>
+	<property name="technology" value="Toota1"></property>
+	<property name="managerName" value="Toota2"></property>
+	<property name="teamMembers" value="100"></property>
+</bean>
+  
+<bean id="orgbean" class="com.training.org.Organization">  
+<property name="orgName" value="DBS"></property>  
+<property name="location" value="Hyd"></property> 
+<property name="noOfEmployee" value="2500"></property> 
+<property name="projects">
+	<list>
+		<value>Toyota Angular</value>
+		<value>Axis Angular</value>
+	</list>
+</property>
+<property name="projectList">
+	<list>
+		<ref bean="project1"/>	
+		<ref bean="project2"/>
+	</list>
+</property>
+</bean>  
+
+</beans> 
